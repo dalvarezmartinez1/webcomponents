@@ -1,0 +1,16 @@
+super-button,
+super-button-inline-prototype {
+    border-radius: 5px;
+    color: #ffffff;
+    background: #3498db;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+}
+
+super-button:hover,
+super-button-inline-prototype:hover {
+    background: #3cb0fd;
+    background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+    text-decoration: none;
+    cursor: pointer;
+}
