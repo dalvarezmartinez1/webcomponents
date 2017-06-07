@@ -3,19 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <title>Webcomponents test</title>
-    <script src="./resources/js/superButton.js"></script>
-    <link rel="stylesheet" href="resources/css/superButton.css">
+    <script src="./js/script.js" async></script>
+		<script src="./js/superButton.js" async></script>
+    <link rel="stylesheet" href="./css/superButton.css">
 </head>
 <body>
-<div>
-    <label>Super button with inline prototype instantiated by declaration</label>
-    <super-button-inline-prototype>SuperButton</super-button-inline-prototype>
-</div>
-<br>
-<div>
-    <label>Mega button extending from button, note that the look and feel is that of a button with no css required</label>
-    <button is="mega-button">Mega button</button>
-</div>
-<br>
+	<div>
+			<label>Super button with inline prototype instantiated by declaration</label>
+			<super-button-inline-prototype>SuperButton</super-button-inline-prototype>
+	</div>
+	<br>
+	<div>
+			<label>Mega button extending from button, note that the look and feel is that of a button with no css required</label>
+			<button is="mega-button">Mega button</button>
+	</div>
+	<br>
+
+	<h4>No img is displayed, no script is run until you activate a template</h4>
+	<button onclick="activateTemplate()">Activate template</button>
+	<br>
+	<template id="myTemplate">
+			<label id="title">Some title</label>
+			<img src="img/web-components.png"/>
+			<script>
+					alert("Template embeded script. Because templates are inert, I will only show up when the template is activated");
+			</script>
+	</template>
 </body>
 </html>
